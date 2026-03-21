@@ -1,0 +1,24 @@
+---
+import type { LanguageSkill } from "../data/cv-data";
+
+interface Props {
+    language: LanguageSkill;
+}
+
+const { language } = Astro.props;
+---
+
+<div
+    class="flex items-center justify-between p-4 rounded-xl bg-card border border-border"
+>
+    <span
+        class="font-bold"
+        data-i18n-es={language.name.es}
+        data-i18n-en={language.name.en}>{language.name.es}</span
+    >
+    <span
+        class="text-blue-500 font-medium italic"
+        data-i18n-es={language.level.es}
+        data-i18n-en={language.level.en}>{language.level.es}</span
+    >
+</div>

@@ -1,0 +1,15 @@
+---
+import type { Interest } from "../data/cv-data";
+
+interface Props {
+    interest: Interest;
+}
+
+const { interest } = Astro.props;
+---
+
+<span
+    class="px-4 py-2 rounded-full bg-card border border-border font-medium"
+    data-i18n-es={interest.name.es}
+    data-i18n-en={interest.name.en}>{interest.name.es}</span
+>

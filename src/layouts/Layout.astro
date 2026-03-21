@@ -1,3 +1,7 @@
+---
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,7 +10,54 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Portfolio</title>
+
+		<script is:inline>
+			const getTheme = () => {
+				if (
+					typeof localStorage !== "undefined" &&
+					localStorage.getItem("theme")
+				) {
+					return localStorage.getItem("theme");
+				}
+				return "dark";
+			};
+
+			const theme = getTheme();
+			if (theme === "light") {
+				document.documentElement.classList.remove("dark");
+			} else {
+				document.documentElement.classList.add("dark");
+			}
+			window.localStorage.setItem("theme", theme);
+
+			// Language auto-detection
+			(function () {
+				var supportedLangs = ["es", "en"];
+				var stored = localStorage.getItem("lang");
+				var lang =
+					stored && supportedLangs.indexOf(stored) !== -1
+						? stored
+						: null;
+				if (!lang) {
+					var browserLang = (navigator.language || "")
+						.split("-")[0]
+						.toLowerCase();
+					lang =
+						supportedLangs.indexOf(browserLang) !== -1
+							? browserLang
+							: "es";
+				}
+				document.documentElement.lang = lang;
+				localStorage.setItem("lang", lang);
+			})();
+		</script>
 	</head>
 	<body>
 		<slot />

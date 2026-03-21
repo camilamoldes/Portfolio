@@ -1,0 +1,40 @@
+---
+import type { Education } from "../data/cv-data";
+
+interface Props {
+    item: Education;
+}
+
+const { item } = Astro.props;
+---
+
+<div
+    class="p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-shadow"
+>
+    <h3
+        class="text-xl font-bold"
+        data-i18n-es={item.degree.es}
+        data-i18n-en={item.degree.en}
+    >
+        {item.degree.es}
+    </h3>
+    <p class="text-lg opacity-80">{item.institution}</p>
+    {
+        item.description && (
+            <p
+                class="text-muted-foreground leading-relaxed mt-2"
+                data-i18n-es={item.description.es}
+                data-i18n-en={item.description.en}
+            >
+                {item.description.es}
+            </p>
+        )
+    }
+    <p
+        class="text-sm text-blue-500 font-medium mt-3"
+        data-i18n-es={item.date.es}
+        data-i18n-en={item.date.en}
+    >
+        {item.date.es}
+    </p>
+</div>

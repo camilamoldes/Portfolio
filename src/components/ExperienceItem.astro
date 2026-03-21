@@ -1,0 +1,40 @@
+---
+import type { Experience } from "../data/cv-data";
+
+interface Props {
+    experience: Experience;
+    isLast?: boolean;
+}
+
+const { experience, isLast = false } = Astro.props;
+const lineClass = isLast
+    ? "relative pl-8"
+    : "relative pl-8 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-px before:bg-border";
+---
+
+<div class={lineClass}>
+    <div class="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-blue-500">
+    </div>
+    <div class="space-y-2">
+        <span
+            class="text-sm font-bold text-blue-500 uppercase tracking-tighter"
+            data-i18n-es={experience.date.es}
+            data-i18n-en={experience.date.en}>{experience.date.es}</span
+        >
+        <h3
+            class="text-xl font-bold"
+            data-i18n-es={experience.role.es}
+            data-i18n-en={experience.role.en}
+        >
+            {experience.role.es}
+        </h3>
+        <p class="text-lg font-medium opacity-80">{experience.company}</p>
+        <p
+            class="text-muted-foreground leading-relaxed"
+            data-i18n-es={experience.description.es}
+            data-i18n-en={experience.description.en}
+        >
+            {experience.description.es}
+        </p>
+    </div>
+</div>
