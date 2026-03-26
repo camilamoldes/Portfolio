@@ -31,14 +31,22 @@ import {
 		<div class="flex items-center gap-2">
 			<button
 				id="lang-toggle"
-				class="px-3 py-1.5 rounded-xl bg-card border border-border hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm text-sm font-semibold tracking-wide"
+				class="no-print px-3 py-1.5 rounded-xl bg-card border border-border hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm text-sm font-semibold tracking-wide"
 				aria-label="Toggle language"
 			>
 				EN
 			</button>
 			<button
+				id="pdf-download"
+				class="no-print px-3 py-1.5 rounded-xl bg-card border border-border hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm text-sm font-semibold tracking-wide flex items-center gap-1.5"
+				aria-label="Download PDF"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+				PDF
+			</button>
+			<button
 				id="theme-toggle"
-				class="p-2 rounded-xl bg-card border border-border hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm"
+				class="no-print p-2 rounded-xl bg-card border border-border hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm"
 				aria-label="Toggle dark mode"
 			>
 				<span class="dark:hidden">🌙</span>
@@ -150,6 +158,12 @@ import {
 			currentLang = langKeys.find((l) => l !== currentLang) || "en";
 			applyTranslations(currentLang);
 			updateLangButton();
+		});
+
+		// --- PDF download ---
+		const pdfBtn = document.getElementById("pdf-download");
+		pdfBtn?.addEventListener("click", () => {
+			window.print();
 		});
 	</script>
 </Layout>

@@ -1,0 +1,182 @@
+/* ─────────────────────────────────────
+   Print Styles for CV / PDF Export
+   ───────────────────────────────────── */
+
+@media print {
+    /* ── Page Setup ── */
+    @page {
+        size: A4;
+        margin: 15mm 15mm 15mm 15mm;
+    }
+
+    /* ── Reset for print ── */
+    html, body {
+        background: white !important;
+        color: black !important;
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Force light mode colors */
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* ── Hide non-print elements ── */
+    header,
+    #theme-toggle,
+    #lang-toggle,
+    .no-print,
+    nav,
+    ::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* ── Layout: Single column for print ── */
+    main {
+        display: block !important;
+        padding-top: 0 !important;
+        flex-direction: column !important;
+    }
+
+    aside {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+        border-right: none !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 16pt !important;
+        margin-bottom: 16pt !important;
+    }
+
+    /* Profile card: horizontal for print */
+    aside > div:first-child {
+        flex-direction: row !important;
+        text-align: left !important;
+        gap: 16pt !important;
+        align-items: center !important;
+    }
+
+    /* Smaller photo for print */
+    aside img {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    /* Hide the glow effect behind photo */
+    aside .group > div:first-child {
+        display: none !important;
+    }
+
+    /* Social links: inline row */
+    aside .grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8pt !important;
+    }
+
+    aside .grid a {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 9pt !important;
+        color: #2563eb !important;
+    }
+
+    /* ── Right column: full width ── */
+    section.flex-1 {
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    /* Section spacing for print */
+    section.flex-1 > section {
+        margin-bottom: 14pt !important;
+        page-break-inside: avoid;
+    }
+
+    /* Smaller titles */
+    section.flex-1 h2 {
+        font-size: 16pt !important;
+        margin-bottom: 8pt !important;
+        color: #1e293b !important;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 4pt;
+    }
+
+    /* Experience items */
+    .space-y-12 > div {
+        margin-bottom: 10pt !important;
+        page-break-inside: avoid;
+    }
+
+    .space-y-12 h3 {
+        font-size: 12pt !important;
+    }
+
+    .space-y-12 p {
+        font-size: 10pt !important;
+    }
+
+    .space-y-12 span {
+        font-size: 9pt !important;
+    }
+
+    /* Timeline dot - print friendly */
+    .space-y-12 .absolute {
+        background-color: #2563eb !important;
+    }
+
+    /* Education cards */
+    .rounded-2xl {
+        border-radius: 4pt !important;
+        border: 1px solid #e2e8f0 !important;
+        padding: 8pt !important;
+        background: #f8fafc !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+
+    /* Interest tags */
+    .rounded-full {
+        border-radius: 4pt !important;
+        padding: 2pt 8pt !important;
+        font-size: 9pt !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #1e293b !important;
+    }
+
+    /* Language cards */
+    .rounded-xl {
+        border-radius: 4pt !important;
+        padding: 6pt 8pt !important;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Remove bottom padding on last section */
+    #idiomas {
+        padding-bottom: 0 !important;
+    }
+
+    /* Links show URL in print */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #64748b;
+        word-break: break-all;
+    }
+
+    /* But not for nav links */
+    nav a::after,
+    aside .grid a::after {
+        content: "" !important;
+    }
+}
