@@ -34,7 +34,7 @@
   text(weight: 700, size: 12pt, font: "Outfit")[#it.body]
 )
 
-// Header (Name & Links)
+// ── Header (Name & Contact) ──────────────────────────────────────────────────
 #grid(
   columns: (1fr, auto),
   align(left)[
@@ -43,21 +43,30 @@
     #text(fill: text-muted, size: 11pt)[Valencia, Spain • 25 years old]
   ],
   align(right)[
-    #link("https://www.linkedin.com/in/javier-fern%C3%A1ndez-bellot-455269291/")[LinkedIn] \ 
+    #link("https://www.linkedin.com/in/javier-fern%C3%A1ndez-bellot-455269291/")[LinkedIn] \\ 
     #link("https://github.com/yaxfer1")[GitHub]
   ]
 )
 
 #v(10pt)
 
-// EXPERIENCE
-= Experience
+
+= About Me
+
+#set text(size: 10pt, fill: rgb("#334155"))
+I am a software developer with experience in the development of human-machine interfaces (HMI) for solar inverters. I have worked with technologies such as Python, Vue, Astro, SQL (JSON) and Docker. I also have experience in the integration of Modbus/SCADA protocols and in the optimization of performance in embedded systems.
+
+
+= Work Experience
+
 
 #grid(
   columns: (1fr, auto),
   [
-    #heading(level: 2)[HMI Software Developer]
-    *Zigor*
+    
+    == HMI Software Developer
+    *Zigor* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+  
   ],
   align(right)[
     #text(fill: text-muted, weight: "bold", size: 9pt)[Apr 2025 - Present]
@@ -68,11 +77,15 @@
 Built HMI for solar inverters on SoM (Linux) using Python, Vue, Astro, SQL (JSON), and Docker. Integrated Modbus/SCADA protocols and optimized performance for embedded deployment under strict resource constraints.
 
 
+
+
 #grid(
   columns: (1fr, auto),
   [
-    #heading(level: 2)[Technical Consulting]
-    *Leyton*
+    
+    == Technical Consulting
+    *Leyton* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+  
   ],
   align(right)[
     #text(fill: text-muted, weight: "bold", size: 9pt)[Dec 2024 - Feb 2025]
@@ -83,11 +96,15 @@ Built HMI for solar inverters on SoM (Linux) using Python, Vue, Astro, SQL (JSON
 Providing consulting services to obtain financing for innovation projects.
 
 
+
+
 #grid(
   columns: (1fr, auto),
   [
-    #heading(level: 2)[Leisure and Youth Group Leader]
-    *Organización Juvenil Española (OJE)*
+    
+    == Leisure and Youth Group Leader
+    *Organización Juvenil Española (OJE)* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+  
   ],
   align(right)[
     #text(fill: text-muted, weight: "bold", size: 9pt)[2018 - Present]
@@ -98,11 +115,15 @@ Providing consulting services to obtain financing for innovation projects.
 Leader and Monitor at the Leisure Time Organization: Organización Juvenil Española.
 
 
+
+
 #grid(
   columns: (1fr, auto),
   [
-    #heading(level: 2)[Erasmus Correspondent in Flanders]
-    *Erasmus en Flandes*
+    
+    == Erasmus Correspondent in Flanders
+    *Erasmus en Flandes* — #text(fill: text-muted, size: 9pt)[Gante, Bélgica]
+  
   ],
   align(right)[
     #text(fill: text-muted, weight: "bold", size: 9pt)[Feb 2022 - Jun 2022]
@@ -113,14 +134,17 @@ Leader and Monitor at the Leisure Time Organization: Organización Juvenil Espa�
 Editor at the 'Erasmus in Flanders' blog to promote tourism in the Flanders region (Belgium).
 
 
-// EDUCATION
+
 = Education
+
 
 #grid(
   columns: (1fr, auto),
   [
-    #heading(level: 2)[Double bachelor degree in Business Management and Computer Engineering]
-    *Universitat Politècnica de València*
+    
+    == Double bachelor degree in Business Management and Computer Engineering
+    *Universitat Politècnica de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+  
   ],
   align(right)[
     #text(fill: text-muted, weight: "bold", size: 9pt)[2018 - 2024]
@@ -132,11 +156,14 @@ Thesis: News generation and editing using GPT: Business Plan and Technological D
 
 
 
+
 #grid(
   columns: (1fr, auto),
   [
-    #heading(level: 2)[Erasmus under Computer Engineering]
-    *Vilniaus Gedimino Technikos Universitetas*
+    
+    == Erasmus under Computer Engineering
+    *Vilniaus Gedimino Technikos Universitetas* — #text(fill: text-muted, size: 9pt)[Vilnius, Lituania]
+  
   ],
   align(right)[
     #text(fill: text-muted, weight: "bold", size: 9pt)[2021 - 2022]
@@ -145,11 +172,15 @@ Thesis: News generation and editing using GPT: Business Plan and Technological D
 
 
 
+
+
 #grid(
   columns: (1fr, auto),
   [
-    #heading(level: 2)[Erasmus under Business Management]
-    *Universiteit Gent (Ghent University)*
+    
+    == Erasmus under Business Management
+    *Universiteit Gent (Ghent University)* — #text(fill: text-muted, size: 9pt)[Gante, Bélgica]
+  
   ],
   align(right)[
     #text(fill: text-muted, weight: "bold", size: 9pt)[2022]
@@ -158,11 +189,15 @@ Thesis: News generation and editing using GPT: Business Plan and Technological D
 
 
 
+
+
 #grid(
   columns: (1fr, auto),
   [
-    #heading(level: 2)[High School Diploma in Science and Economics]
-    *Colegio Sagrado Corazón Hermanos Maristas*
+    
+    == High School Diploma in Science and Economics
+    *Colegio Sagrado Corazón Hermanos Maristas* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+  
   ],
   align(right)[
     #text(fill: text-muted, weight: "bold", size: 9pt)[2016 - 2018]
@@ -171,16 +206,22 @@ Thesis: News generation and editing using GPT: Business Plan and Technological D
 
 
 
-// INTERESTS & KNOWLEDGE
+
+
+
+
+
+
+
 = Knowledge & Interests
 #set text(size: 10pt)
 Programming • Web Development (React, Vue, Astro) • Python, Java • Physical Exercise and Health • Leisure and Recreation • NLP Tools and Chat Assistants
 
-// LANGUAGES
 = Languages
 #grid(
   columns: (1fr, 1fr, 1fr),
   [ *Spanish*: Native ],
-  [ *English*: Advanced (C1) ],
+  [ *English*: Advanced (C1) _(C1)_ ],
   [ *Valencian*: Native ]
 )
+

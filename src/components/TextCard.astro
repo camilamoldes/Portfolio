@@ -1,0 +1,21 @@
+---
+import type { Text } from "../data/cv-data";
+
+interface Props {
+    text: Text;
+    isLast?: boolean;
+}
+
+const { text, isLast = false } = Astro.props;
+const lineClass = isLast ? "" : "border-l border-border pl-4";
+---
+
+<div class={lineClass}>
+    <p
+        class="text-muted-foreground leading-relaxed"
+        data-i18n-es={text.text.es}
+        data-i18n-en={text.text.en}
+    >
+        {text.text.es}
+    </p>
+</div>

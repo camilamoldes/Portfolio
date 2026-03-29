@@ -1,0 +1,53 @@
+---
+import type { Reference } from "../data/cv-data";
+
+interface Props {
+    reference: Reference;
+}
+
+const { reference } = Astro.props;
+---
+
+<div
+    class="p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-shadow"
+>
+    {reference.quote && (
+        <div class="mb-4 text-muted-foreground italic relative">
+            <span class="absolute -top-2 -left-2 text-4xl text-border/50">"</span>
+            <p 
+                class="relative z-10 pl-6 leading-relaxed"
+                data-i18n-es={reference.quote.es}
+                data-i18n-en={reference.quote.en}    
+            >
+                {reference.quote.es}
+            </p>
+        </div>
+    )}
+
+    <div class="flex items-center gap-4 mt-2">
+        <div class="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-lg font-bold text-muted-foreground uppercase">
+            {reference.name.charAt(0)}
+        </div>
+        <div>
+            <h3 class="text-lg font-bold">
+                {reference.name}
+            </h3>
+            <p class="text-sm text-muted-foreground">
+                <span 
+                    data-i18n-es={reference.role.es}
+                    data-i18n-en={reference.role.en}
+                >
+                    {reference.role.es}
+                </span> 
+                en <span class="font-medium">{reference.company}</span>
+            </p>
+        </div>
+    </div>
+    
+    {reference.contact && (
+        <div class="mt-4 pt-4 border-t border-border flex items-center gap-2 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href={`mailto:${reference.contact}`} class="text-blue-500 hover:underline">{reference.contact}</a>
+        </div>
+    )}
+</div>

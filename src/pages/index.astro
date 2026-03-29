@@ -7,15 +7,48 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 import EducationCard from "../components/EducationCard.astro";
 import InterestTag from "../components/InterestTag.astro";
 import LanguageCard from "../components/LanguageCard.astro";
+import TextCard from "../components/TextCard.astro";
+import SkillGroupCard from "../components/SkillGroupCard.astro";
+import CertificationCard from "../components/CertificationCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import VolunteerItem from "../components/VolunteerItem.astro";
+import AchievementCard from "../components/AchievementCard.astro";
+import PublicationCard from "../components/PublicationCard.astro";
+import ReferenceCard from "../components/ReferenceCard.astro";
 
 import {
 	profile,
-	sections,
 	experiences,
 	education,
 	interests,
 	languageSkills,
+	texts,
+	skills,
+	certifications,
+	projects,
+	volunteer,
+	achievements,
+	publications,
+	references,
 } from "../data/cv-data";
+
+import type { NavSection } from "../data/cv-data";
+
+// ─── Generación dinámica del menú lateral ──────────────────────────────
+const activeSections: NavSection[] = [
+	{ id: "sobre-mi", label: { es: "Sobre mí", en: "About me" } },
+	...(experiences.length > 0 ? [{ id: "experiencia", label: { es: "Experiencia", en: "Experience" } }] : []),
+	...(education.length > 0 ? [{ id: "formacion", label: { es: "Formación", en: "Education" } }] : []),
+	...(skills.length > 0 ? [{ id: "habilidades", label: { es: "Habilidades", en: "Skills" } }] : []),
+	...(certifications.length > 0 ? [{ id: "certificaciones", label: { es: "Certificaciones", en: "Certifications" } }] : []),
+	...(projects.length > 0 ? [{ id: "proyectos", label: { es: "Proyectos", en: "Projects" } }] : []),
+	...(volunteer.length > 0 ? [{ id: "voluntariado", label: { es: "Voluntariado", en: "Volunteering" } }] : []),
+	...(achievements.length > 0 ? [{ id: "logros", label: { es: "Logros", en: "Achievements" } }] : []),
+	...(publications.length > 0 ? [{ id: "publicaciones", label: { es: "Publicaciones", en: "Publications" } }] : []),
+	...(interests.length > 0 ? [{ id: "intereses", label: { es: "Conocimientos e Intereses", en: "Knowledge & Interests" } }] : []),
+	...(languageSkills.length > 0 ? [{ id: "idiomas", label: { es: "Idiomas", en: "Languages" } }] : []),
+	...(references.length > 0 ? [{ id: "referencias", label: { es: "Referencias", en: "References" } }] : []),
+];
 ---
 
 <Layout>
@@ -41,7 +74,23 @@ import {
 				class="no-print px-3 py-1.5 rounded-xl bg-card border border-border hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm text-sm font-semibold tracking-wide flex items-center gap-1.5"
 				aria-label="Download PDF"
 			>
-				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="14"
+					height="14"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+					></path><polyline points="7 10 12 15 17 10"></polyline><line
+						x1="12"
+						x2="12"
+						y1="15"
+						y2="3"></line></svg
+				>
 				PDF
 			</button>
 			<button
@@ -62,11 +111,27 @@ import {
 		>
 			<ProfileCard profile={profile} />
 			<SocialLinks links={profile.links} />
-			<SidebarNav sections={sections} />
+			<SidebarNav sections={activeSections} />
 		</aside>
 
 		<!-- Right Column: Content -->
-		<section class="flex-1 p-8 md:p-12 overflow-y-auto space-y-24">
+		<section class="flex-1 p-8 md:p-12 pb-32 overflow-y-auto space-y-24">
+			<!-- Sobre mi -->
+			<section id="sobre-mi" class="scroll-mt-24">
+				<h2 class="text-4xl font-bold mb-8" data-i18n="about.title">
+					Sobre mi
+				</h2>
+				<div class="space-y-12">
+					{
+						texts.map((text, i) => (
+							<TextCard
+								text={text}
+								isLast={i === texts.length - 1}
+							/>
+						))
+					}
+				</div>
+			</section>
 			<!-- Experiencia -->
 			<section id="experiencia" class="scroll-mt-24">
 				<h2
@@ -97,6 +162,83 @@ import {
 				</div>
 			</section>
 
+			<!-- Habilidades -->
+			{skills.length > 0 && (
+				<section id="habilidades" class="scroll-mt-24">
+					<h2 class="text-4xl font-bold mb-8" data-i18n="skills.title">
+						Habilidades
+					</h2>
+					<div class="space-y-6">
+						{skills.map((group) => <SkillGroupCard group={group} />)}
+					</div>
+				</section>
+			)}
+
+			<!-- Certificaciones -->
+			{certifications.length > 0 && (
+				<section id="certificaciones" class="scroll-mt-24">
+					<h2 class="text-4xl font-bold mb-8" data-i18n="certifications.title">
+						Certificaciones
+					</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{certifications.map((cert) => <CertificationCard cert={cert} />)}
+					</div>
+				</section>
+			)}
+
+			<!-- Proyectos -->
+			{projects.length > 0 && (
+				<section id="proyectos" class="scroll-mt-24">
+					<h2 class="text-4xl font-bold mb-8" data-i18n="projects.title">
+						Proyectos
+					</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{projects.map((project) => <ProjectCard project={project} />)}
+					</div>
+				</section>
+			)}
+
+			<!-- Voluntariado -->
+			{volunteer.length > 0 && (
+				<section id="voluntariado" class="scroll-mt-24">
+					<h2 class="text-4xl font-bold mb-8" data-i18n="volunteer.title">
+						Voluntariado
+					</h2>
+					<div class="space-y-12">
+						{volunteer.map((vol, i) => (
+							<VolunteerItem
+								volunteer={vol}
+								isLast={i === volunteer.length - 1}
+							/>
+						))}
+					</div>
+				</section>
+			)}
+
+			<!-- Logros -->
+			{achievements.length > 0 && (
+				<section id="logros" class="scroll-mt-24">
+					<h2 class="text-4xl font-bold mb-8" data-i18n="achievements.title">
+						Logros
+					</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{achievements.map((achievement) => <AchievementCard achievement={achievement} />)}
+					</div>
+				</section>
+			)}
+
+			<!-- Publicaciones -->
+			{publications.length > 0 && (
+				<section id="publicaciones" class="scroll-mt-24">
+					<h2 class="text-4xl font-bold mb-8" data-i18n="publications.title">
+						Publicaciones
+					</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{publications.map((pub) => <PublicationCard publication={pub} />)}
+					</div>
+				</section>
+			)}
+
 			<!-- Intereses -->
 			<section id="intereses" class="scroll-mt-24">
 				<h2 class="text-4xl font-bold mb-8" data-i18n="interests.title">
@@ -112,7 +254,7 @@ import {
 			</section>
 
 			<!-- Idiomas -->
-			<section id="idiomas" class="scroll-mt-24 pb-24">
+			<section id="idiomas" class="scroll-mt-24">
 				<h2 class="text-4xl font-bold mb-8" data-i18n="languages.title">
 					Idiomas
 				</h2>
@@ -124,6 +266,18 @@ import {
 					}
 				</div>
 			</section>
+
+			<!-- Referencias -->
+			{references.length > 0 && (
+				<section id="referencias" class="scroll-mt-24">
+					<h2 class="text-4xl font-bold mb-8" data-i18n="references.title">
+						Referencias
+					</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{references.map((ref) => <ReferenceCard reference={ref} />)}
+					</div>
+				</section>
+			)}
 		</section>
 	</main>
 

@@ -1,0 +1,42 @@
+---
+import type { Volunteer } from "../data/cv-data";
+
+interface Props {
+    volunteer: Volunteer;
+    isLast?: boolean;
+}
+
+const { volunteer, isLast = false } = Astro.props;
+const lineClass = isLast
+    ? "relative pl-8"
+    : "relative pl-8 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-px before:bg-border";
+---
+
+<div class={lineClass}>
+    <div class="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-blue-500">
+    </div>
+    <div class="space-y-2">
+        <span
+            class="text-sm font-bold text-blue-500 uppercase tracking-tighter"
+            data-i18n-es={volunteer.date.es}
+            data-i18n-en={volunteer.date.en}>{volunteer.date.es}</span
+        >
+        <h3
+            class="text-xl font-bold"
+            data-i18n-es={volunteer.role.es}
+            data-i18n-en={volunteer.role.en}
+        >
+            {volunteer.role.es}
+        </h3>
+        <p class="text-lg font-medium opacity-80">{volunteer.organization} {volunteer.location && <span class="text-muted-foreground text-sm font-normal"> — {volunteer.location}</span>}</p>
+        {volunteer.description && (
+            <p
+                class="text-muted-foreground leading-relaxed"
+                data-i18n-es={volunteer.description.es}
+                data-i18n-en={volunteer.description.en}
+            >
+                {volunteer.description.es}
+            </p>
+        )}
+    </div>
+</div>
