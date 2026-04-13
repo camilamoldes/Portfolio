@@ -281,10 +281,11 @@ ${renderReferences(lang)}
   writeFileSync(outputPath, typstContent);
   console.log(`Typst source written to ${outputPath}`);
 
+  const pdfOutputPath = join(__dirname, '..', 'public', `cv-${lang}.pdf`);
   try {
     const fontsPath = join(__dirname, '..', 'src', 'assets', 'fonts');
-    execSync(`typst compile --font-path "${fontsPath}" "${outputPath}"`, { stdio: 'inherit' });
-    console.log(`PDF successfully generated: cv-${lang}.pdf`);
+    execSync(`typst compile --font-path "${fontsPath}" "${outputPath}" "${pdfOutputPath}"`, { stdio: 'inherit' });
+    console.log(`PDF successfully generated: ${pdfOutputPath}`);
   } catch (error) {
     console.error(`Error compiling Typst file for ${lang}`);
   }
