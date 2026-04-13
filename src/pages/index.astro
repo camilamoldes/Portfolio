@@ -236,10 +236,11 @@ const activeSections: NavSection[] = [
 
 		<!-- Right Column: Content -->
 		<section
-			class="flex-1 p-8 md:p-12 lg:p-16 pb-32 overflow-y-auto space-y-16 md:space-y-20"
+			id="content-column"
+			class="flex-1 p-8 md:p-12 lg:p-16 pt-8 md:pt-12 lg:pt-16 pb-32 md:h-[calc(100vh-64px)] md:overflow-y-auto space-y-16 md:space-y-20 custom-scrollbar"
 		>
 			<!-- Sobre mi -->
-			<section id="sobre-mi" class="scroll-mt-24 reveal">
+			<section id="sobre-mi" class="reveal">
 				<h2 class="text-4xl font-bold mb-8" data-i18n="about.title">
 					Sobre mi
 				</h2>
@@ -457,6 +458,53 @@ const activeSections: NavSection[] = [
 			prepareWithSegments,
 			measureNaturalWidth,
 		} from "@chenglou/pretext";
+
+		// --- Initial Scroll Fix ---
+		const contentColumn = document.getElementById("content-column");
+		const scrollToTop = () => {
+			if (window.innerWidth >= 768 && contentColumn) {
+				contentColumn.scrollTo({ top: 0, behavior: "smooth" });
+			} else {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			}
+		};
+
+		// Si es carga inicial
+		if (!window.location.hash || window.location.hash === "#sobre-mi") {
+			if (window.innerWidth >= 768 && contentColumn) {
+				contentColumn.scrollTop = 0;
+			} else {
+				window.scrollTo(0, 0);
+			}
+		}
+
+		// Interceptar clics en el menú para todas las secciones
+		document.querySelectorAll('a[href^="#"]').forEach((link) => {
+			link.addEventListener("click", (e) => {
+				const id = link.getAttribute("href")?.substring(1);
+				if (!id) return;
+
+				const target = document.getElementById(id);
+				if (target && window.innerWidth >= 768 && contentColumn) {
+					e.preventDefault();
+					history.pushState(null, "", `#${id}`);
+
+					if (id === "sobre-mi") {
+						contentColumn.scrollTo({ top: 0, behavior: "smooth" });
+					} else {
+						// Para las demás secciones, calculamos la distancia desde el top
+						// del contenedor, restando un "margen de respiro" (~96px)
+						// offsetTop es relativo al padre posicionado, por lo que en este
+						// caso es directo desde el inicio del contentColumn.
+						const topPos = target.offsetTop - 96; 
+						contentColumn.scrollTo({
+							top: topPos > 0 ? topPos : 0,
+							behavior: "smooth",
+						});
+					}
+				}
+			});
+		});
 
 		// --- Setup Pretext width calculations for button text ---
 		function stabilizeButtonWidth() {
