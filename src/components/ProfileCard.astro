@@ -13,7 +13,7 @@ const { profile } = Astro.props;
 <div class="flex flex-col items-center text-center gap-4">
     <div class="relative group">
         <div
-            class="absolute -inset-1 bg-linear-to-r from-blue-600 to-cyan-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"
+            class="absolute -inset-1 bg-linear-to-r from-accent-hover to-accent rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"
         >
         </div>
         <Image
@@ -24,6 +24,17 @@ const { profile } = Astro.props;
     </div>
     <div class="space-y-1">
         <h2 class="text-2xl font-bold">{profile.shortName}</h2>
+        {
+            profile.tagline && (
+                <p
+                    class="text-accent text-sm font-medium"
+                    data-i18n-es={profile.tagline.es}
+                    data-i18n-en={profile.tagline.en}
+                >
+                    {profile.tagline.es}
+                </p>
+            )
+        }
         <p
             class="text-muted-foreground text-sm flex items-center justify-center gap-2"
             data-i18n-es={profile.location.es}

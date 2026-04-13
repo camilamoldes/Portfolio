@@ -71,10 +71,10 @@ ${dateGrid(`
 #set text(size: 10pt, fill: rgb("#334155"))
 ${exp.description[lang]}
 ${exp.highlights?.length
-  ? `#list(
+      ? `#list(
   ${exp.highlights.map(h => `[${h[lang]}]`).join(',\n  ')}
 )`
-  : ''}
+      : ''}
 `).join('\n')}`;
 }
 
@@ -88,8 +88,8 @@ ${dateGrid(`
     *${ed.institution}*${ed.location ? ` — #text(fill: text-muted, size: 9pt)[${ed.location}]` : ''}
   `, ed.date[lang])}
 ${ed.description
-  ? `#v(4pt)\n#set text(size: 10pt, fill: rgb("#334155"))\n${ed.description[lang]}`
-  : ''}
+      ? `#v(4pt)\n#set text(size: 10pt, fill: rgb("#334155"))\n${ed.description[lang]}`
+      : ''}
 ${ed.notes ? `\n#text(size: 9pt, fill: text-muted)[${ed.notes[lang]}]` : ''}
 `).join('\n')}`;
 }
@@ -237,15 +237,27 @@ for (const lang of langs) {
 )
 
 // ── Header (Name & Contact) ──────────────────────────────────────────────────
+#let photo-path = "src/assets/photo.webp"
+
 #grid(
-  columns: (1fr, auto),
+  columns: (1fr, auto, auto),
+  gutter: 12pt,
   align(left)[
     #text(size: 26pt, weight: "bold", tracking: 0.5pt, font: "Outfit")[${profile.shortName}] \\
     #v(3pt)
     #text(fill: text-muted, size: 11pt)[${profile.location[lang]}]
   ],
-  align(right)[
-    ${profile.links.map(l => `#link("${l.url}")[${l.label}]`).join(' \\\\ \n    ')}
+  align(right + horizon)[
+    ${profile.links.map(l => `#link("${l.url}")[${l.label}]`).join(' \\\\\\ \n    ')}
+  ],
+  align(right + horizon)[
+    #box(
+      clip: true,
+      width: 60pt,
+      height: 60pt,
+      radius: 50%,
+      image(photo-path, width: 60pt, height: 60pt, fit: "cover")
+    )
   ]
 )
 

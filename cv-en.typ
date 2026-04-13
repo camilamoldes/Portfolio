@@ -35,16 +35,29 @@
 )
 
 // ── Header (Name & Contact) ──────────────────────────────────────────────────
+#let photo-path = "src/assets/photo.webp"
+
 #grid(
-  columns: (1fr, auto),
+  columns: (1fr, auto, auto),
+  gutter: 12pt,
   align(left)[
-    #text(size: 26pt, weight: "bold", tracking: 0.5pt, font: "Outfit")[Javier Fernández] \
+    #text(size: 26pt, weight: "bold", tracking: 0.5pt, font: "Outfit")[Javier Fernández Bellot] \
     #v(3pt)
     #text(fill: text-muted, size: 11pt)[Valencia, Spain • 25 years old]
   ],
-  align(right)[
-    #link("https://www.linkedin.com/in/javier-fern%C3%A1ndez-bellot-455269291/")[LinkedIn] \\ 
-    #link("https://github.com/yaxfer1")[GitHub]
+  align(right + horizon)[
+    #link("https://www.linkedin.com/in/javier-fern%C3%A1ndez-bellot-455269291/")[LinkedIn] \\\ 
+    #link("https://github.com/yaxfer1")[GitHub] \\\ 
+    #link("mailto:javierfernandezbellot@gmail.com")[Email]
+  ],
+  align(right + horizon)[
+    #box(
+      clip: true,
+      width: 60pt,
+      height: 60pt,
+      radius: 50%,
+      image(photo-path, width: 60pt, height: 60pt, fit: "cover")
+    )
   ]
 )
 
@@ -54,7 +67,11 @@
 = About Me
 
 #set text(size: 10pt, fill: rgb("#334155"))
-I am a software developer with experience in the development of human-machine interfaces (HMI) for solar inverters. I have worked with technologies such as Python, Vue, Astro, SQL (JSON) and Docker. I also have experience in the integration of Modbus/SCADA protocols and in the optimization of performance in embedded systems.
+I am a Computer Engineer and Business Administration graduate. I currently work as a full-stack developer in the renewable energy sector, building everything from interfaces on embedded Linux systems to internal web applications from scratch. My dual background gives me a different perspective: I don't just focus on how to build software, but on understanding why it's worth building in the first place.
+
+
+#set text(size: 10pt, fill: rgb("#334155"))
+I'm passionate about high-impact projects, space exploration, and automation. I integrate AI daily to work smarter, but I actively study and improve my programming skills, as I don't believe we are anywhere near being replaced by it yet. My goal is to surround myself with brilliant people to solve hard problems, and I am completely open to relocating anywhere in Europe or the US (having already lived in Belgium and Lithuania) to join a project that matters.
 
 
 = Work Experience
@@ -64,7 +81,7 @@ I am a software developer with experience in the development of human-machine in
   columns: (1fr, auto),
   [
     
-    == HMI Software Developer
+    == Full-Stack Developer
     *Zigor* — #text(fill: text-muted, size: 9pt)[Valencia, España]
   
   ],
@@ -74,8 +91,13 @@ I am a software developer with experience in the development of human-machine in
 )
 #v(4pt)
 #set text(size: 10pt, fill: rgb("#334155"))
-Built HMI for solar inverters on SoM (Linux) using Python, Vue, Astro, SQL (JSON), and Docker. Integrated Modbus/SCADA protocols and optimized performance for embedded deployment under strict resource constraints.
-
+Software development for the renewable energy sector: HMI interfaces for high-power solar inverters on embedded Linux platforms (SoM), and internal web applications for company process digitalization. I work with Python, Vue, Astro, Flask, SQL, Docker, and industrial protocols (Modbus, CAN, SCADA).
+#list(
+  [Designed and built from scratch an internal web app (Astro + PostgreSQL + Vue) for inventory management and lab scheduling that significantly improved team productivity],
+  [Built REST APIs with Flask and SQLAlchemy under external client requirements with extensive behavior specification lists],
+  [Designed an automated internationalization (i18n) pipeline to manage translations seamlessly],
+  [Managed the full lifecycle: from requirements to deployment with Docker on self-hosted servers and SoMs]
+)
 
 
 
@@ -83,7 +105,7 @@ Built HMI for solar inverters on SoM (Linux) using Python, Vue, Astro, SQL (JSON
   columns: (1fr, auto),
   [
     
-    == Technical Consulting
+    == R&D Technical Consultant
     *Leyton* — #text(fill: text-muted, size: 9pt)[Valencia, España]
   
   ],
@@ -93,26 +115,7 @@ Built HMI for solar inverters on SoM (Linux) using Python, Vue, Astro, SQL (JSON
 )
 #v(4pt)
 #set text(size: 10pt, fill: rgb("#334155"))
-Providing consulting services to obtain financing for innovation projects.
-
-
-
-
-#grid(
-  columns: (1fr, auto),
-  [
-    
-    == Leisure and Youth Group Leader
-    *Organización Juvenil Española (OJE)* — #text(fill: text-muted, size: 9pt)[Valencia, España]
-  
-  ],
-  align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2018 - Present]
-  ]
-)
-#v(4pt)
-#set text(size: 10pt, fill: rgb("#334155"))
-Leader and Monitor at the Leisure Time Organization: Organización Juvenil Española.
+Advised companies on obtaining public and private funding for R&D and innovation projects. Wrote complete technical reports for innovation projects across various sectors. I left this role to return to positions more focused on software development and engineering.
 
 
 
@@ -131,7 +134,7 @@ Leader and Monitor at the Leisure Time Organization: Organización Juvenil Espa�
 )
 #v(4pt)
 #set text(size: 10pt, fill: rgb("#334155"))
-Editor at the 'Erasmus in Flanders' blog to promote tourism in the Flanders region (Belgium).
+Editor at the 'Erasmus in Flanders' blog, creating content to promote tourism and student life in the Flanders region during my Erasmus stay in Belgium.
 
 
 
@@ -142,7 +145,7 @@ Editor at the 'Erasmus in Flanders' blog to promote tourism in the Flanders regi
   columns: (1fr, auto),
   [
     
-    == Double bachelor degree in Business Management and Computer Engineering
+    == Double Bachelor's Degree in Computer Engineering and Business Administration
     *Universitat Politècnica de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
   
   ],
@@ -152,7 +155,7 @@ Editor at the 'Erasmus in Flanders' blog to promote tourism in the Flanders regi
 )
 #v(4pt)
 #set text(size: 10pt, fill: rgb("#334155"))
-Thesis: News generation and editing using GPT: Business Plan and Technological Development.
+Thesis: Full-stack application (React + Python + SQL) for news generation and editing with GPT, integrating RAG and LangChain agents. Included business plan and technological development.
 
 
 
@@ -161,7 +164,7 @@ Thesis: News generation and editing using GPT: Business Plan and Technological D
   columns: (1fr, auto),
   [
     
-    == Erasmus under Computer Engineering
+    == Erasmus — Computer Engineering
     *Vilniaus Gedimino Technikos Universitetas* — #text(fill: text-muted, size: 9pt)[Vilnius, Lituania]
   
   ],
@@ -178,7 +181,7 @@ Thesis: News generation and editing using GPT: Business Plan and Technological D
   columns: (1fr, auto),
   [
     
-    == Erasmus under Business Management
+    == Erasmus — Business Administration
     *Universiteit Gent (Ghent University)* — #text(fill: text-muted, size: 9pt)[Gante, Bélgica]
   
   ],
@@ -207,21 +210,114 @@ Thesis: News generation and editing using GPT: Business Plan and Technological D
 
 
 
+= Skills
+
+*Languages:* Python • TypeScript / JavaScript • Java • SQL • HTML / CSS
 
 
+*Frontend:* Vue • React • Astro • Tailwind CSS
+
+
+*Backend & Infrastructure:* Flask • REST APIs • PostgreSQL • SQLite • Docker • Linux • Git • CI/CD
+
+
+*Protocols & Embedded:* Modbus • CAN • SCADA • Sistemas embebidos Linux (SoM)
+
+
+*AI & Data:* LangChain • RAG • NLP • LLMs / Prompt Engineering
+
+
+*Soft Skills:* Liderazgo • Autonomía • Resolución de problemas • Comunicación • Trabajo en equipo • Scrum / Agile
+
+
+
+= Personal Projects
+
+
+#grid(
+  columns: (1fr, auto),
+  [
+    
+    == GPT News Editor
+    #text(size: 9pt, fill: text-muted)[React · Python · SQL · LangChain · GPT / OpenAI]
+  
+  ],
+  align(right)[
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2024]
+  ]
+)
+#v(4pt)
+#set text(size: 10pt, fill: rgb("#334155"))
+Full-stack application built as my Bachelor's Thesis: a GPT-powered news editor with RAG architecture and LangChain agents. Users can generate, edit, and refine articles through a Human-in-the-Loop workflow. My first real end-to-end development experience, far beyond academic exercises.
+
+
+
+#grid(
+  columns: (1fr, auto),
+  [
+    
+    == Portfolio Web #text(fill: primary)[#link("https://github.com/yaxfer1/portfolio")[↗]]
+    #text(size: 9pt, fill: text-muted)[Astro · TypeScript · Tailwind CSS · Typst]
+  
+  ],
+  align(right)[
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2026]
+  ]
+)
+#v(4pt)
+#set text(size: 10pt, fill: rgb("#334155"))
+My personal website and live CV, built with Astro with automatic PDF export via Typst. Designed so I can update my CV quickly, with internationalization (ES/EN), dark mode, and a minimalist design that reflects my style.
+
+
+
+#grid(
+  columns: (1fr, auto),
+  [
+    
+    == Zigor Internal Tools
+    #text(size: 9pt, fill: text-muted)[Astro · Vue · PostgreSQL · Python · Docker · Modbus]
+  
+  ],
+  align(right)[
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2025]
+  ]
+)
+#v(4pt)
+#set text(size: 10pt, fill: rgb("#334155"))
+Internal web application I designed and developed on my own initiative to organize lab inventory and team scheduling. I learned Astro and PostgreSQL from scratch, integrated Vue components, user management, Modbus connectivity, and full deployment with Docker on self-hosted servers. It had a real, direct impact on my colleagues' productivity.
+
+
+= Volunteering & Activities
+
+
+#grid(
+  columns: (1fr, auto),
+  [
+    
+    == Youth Leader and Leisure & Recreation Instructor
+    *OJE — Organización Juvenil Española* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+  
+  ],
+  align(right)[
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2018 - Present]
+  ]
+)
+#v(4pt)
+#set text(size: 10pt, fill: rgb("#334155"))
+Organized and supervised educational and recreational activities for young people: summer camps, outdoor sports (rappelling, hiking), group projects, and workshops. I've guided participants in developing teamwork, leadership, and problem-solving skills while ensuring a safe and engaging environment.
 
 
 
 
 = Knowledge & Interests
 #set text(size: 10pt)
-Programming • Web Development (React, Vue, Astro) • Python, Java • Physical Exercise and Health • Leisure and Recreation • NLP Tools and Chat Assistants
+Artificial Intelligence & LLMs • Space Exploration • Process Automation • Renewable Energy • Full-Stack Development • Entrepreneurship & Startups • Fitness & Health • Leisure & Recreation Instructor License • Driver's License (B)
 
 = Languages
 #grid(
   columns: (1fr, 1fr, 1fr),
   [ *Spanish*: Native ],
-  [ *English*: Advanced (C1) _(C1)_ ],
-  [ *Valencian*: Native ]
+  [ *English*: C1 — Advanced _(C1)_ ],
+  [ *Valencian / Catalan*: Native ]
 )
 

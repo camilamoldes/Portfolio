@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { text, isLast = false } = Astro.props;
-const lineClass = isLast ? "" : "border-l border-border pl-4";
+const lineClass = isLast ? "" : "border-l border-accent/50 pl-6";
 ---
 
 <div class={lineClass}>

@@ -11,8 +11,23 @@ const { achievement } = Astro.props;
 <div
     class="p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-shadow flex gap-4 items-start"
 >
-    <div class="p-3 rounded-full bg-yellow-500/10 text-yellow-600 dark:text-yellow-500 shrink-0">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+    <div
+        class="p-3 rounded-full bg-yellow-500/10 text-yellow-600 dark:text-yellow-500 shrink-0"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><circle cx="12" cy="8" r="7"></circle><polyline
+                points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+            ></polyline></svg
+        >
     </div>
 
     <div class="flex-1">
@@ -23,29 +38,35 @@ const { achievement } = Astro.props;
         >
             {achievement.title.es}
         </h3>
-        
-        {achievement.issuer && (
-            <p class="text-lg opacity-80 mt-1">{achievement.issuer}</p>
-        )}
-        
-        {achievement.description && (
-            <p
-                class="text-muted-foreground leading-relaxed mt-2"
-                data-i18n-es={achievement.description.es}
-                data-i18n-en={achievement.description.en}
-            >
-                {achievement.description.es}
-            </p>
-        )}
-        
-        {achievement.date && (
-            <p
-                class="text-sm font-semibold text-blue-500 mt-3"
-                data-i18n-es={achievement.date.es}
-                data-i18n-en={achievement.date.en}
-            >
-                {achievement.date.es}
-            </p>
-        )}
+
+        {
+            achievement.issuer && (
+                <p class="text-lg opacity-80 mt-1">{achievement.issuer}</p>
+            )
+        }
+
+        {
+            achievement.description && (
+                <p
+                    class="text-muted-foreground leading-relaxed mt-2"
+                    data-i18n-es={achievement.description.es}
+                    data-i18n-en={achievement.description.en}
+                >
+                    {achievement.description.es}
+                </p>
+            )
+        }
+
+        {
+            achievement.date && (
+                <p
+                    class="text-sm font-semibold text-(--accent) mt-3"
+                    data-i18n-es={achievement.date.es}
+                    data-i18n-en={achievement.date.en}
+                >
+                    {achievement.date.es}
+                </p>
+            )
+        }
     </div>
 </div>

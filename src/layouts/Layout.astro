@@ -8,10 +8,28 @@ import "../styles/print.css";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio</title>
+		<link rel="manifest" href="/manifest.json" />
+		<title>Javier Fernández Bellot - Portfolio</title>
+		<meta
+			name="description"
+			content="Portfolio profesional de Javier Fernández Bellot. Desarrollador de Software HMI especializado en Python, Vue y sistemas embebidos."
+		/>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://javierfernandezbellot.com/" />
+		<!-- Placeholder URL, user should update if different -->
+		<meta
+			property="og:title"
+			content="Javier Fernández Bellot - Portfolio"
+		/>
+		<meta
+			property="og:description"
+			content="Portfolio profesional de Javier Fernández Bellot. Desarrollador de Software HMI especializado en Python, Vue y sistemas embebidos."
+		/>
+		<meta property="og:image" content="/icon-512.png" />
 
 		<script is:inline>
 			const getTheme = () => {
@@ -21,7 +39,7 @@ import "../styles/print.css";
 				) {
 					return localStorage.getItem("theme");
 				}
-				return "dark";
+				return "light";
 			};
 
 			const theme = getTheme();

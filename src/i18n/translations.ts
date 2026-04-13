@@ -25,6 +25,7 @@ export const translations: Record<Lang, Record<string, string>> = {
         "interests.title": "Conocimientos e Intereses",
         "languages.title": "Idiomas",
         "about.title": "Sobre Mí",
+        "download.cv": "Descargar CV",
     },
     en: {
         "header.name": "Javier Fernández Bellot",
@@ -42,5 +43,6 @@ export const translations: Record<Lang, Record<string, string>> = {
         "interests.title": "Knowledge & Interests",
         "languages.title": "Languages",
         "about.title": "About Me",
+        "download.cv": "Download CV",
     },
 };

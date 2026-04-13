@@ -1,0 +1,16 @@
+{
+  "name": "Javier Fernández Bellot - Portfolio",
+  "short_name": "Javier Portfolio",
+  "description": "Portfolio profesional de Javier Fernández Bellot",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
