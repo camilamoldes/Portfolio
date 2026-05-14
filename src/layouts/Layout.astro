@@ -4,31 +4,39 @@ import "../styles/print.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="manifest" href="/manifest.json" />
-		<title>Javier Fernández Bellot - Portfolio</title>
+
+		<title>Camila Moldes Ángel - Portfolio</title>
+
 		<meta
 			name="description"
-			content="Portfolio profesional de Javier Fernández Bellot. Desarrollador de Software HMI especializado en Python, Vue y sistemas embebidos."
+			content="Portfolio profesional de Camila Moldes Ángel. Doctoranda en Educación, investigadora educativa y especialista en gestión académica, innovación y transformación digital."
 		/>
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://javierfernandezbellot.com/" />
-		<!-- Placeholder URL, user should update if different -->
+
+		<meta
+			property="og:url"
+			content="https://camilamoldes.com/"
+		/>
+
 		<meta
 			property="og:title"
-			content="Javier Fernández Bellot - Portfolio"
+			content="Camila Moldes Ángel - Portfolio"
 		/>
+
 		<meta
 			property="og:description"
-			content="Portfolio profesional de Javier Fernández Bellot. Desarrollador de Software HMI especializado en Python, Vue y sistemas embebidos."
+			content="Portfolio profesional de Camila Moldes Ángel. Doctoranda en Educación, investigadora educativa y especialista en gestión académica, innovación y transformación digital."
 		/>
+
 		<meta property="og:image" content="/icon-512.png" />
 
 		<script is:inline>
@@ -43,35 +51,43 @@ import "../styles/print.css";
 			};
 
 			const theme = getTheme();
+
 			if (theme === "light") {
 				document.documentElement.classList.remove("dark");
 			} else {
 				document.documentElement.classList.add("dark");
 			}
+
 			window.localStorage.setItem("theme", theme);
 
 			// Language auto-detection
 			(function () {
 				var supportedLangs = ["es", "en"];
+
 				var stored = localStorage.getItem("lang");
+
 				var lang =
 					stored && supportedLangs.indexOf(stored) !== -1
 						? stored
 						: null;
+
 				if (!lang) {
 					var browserLang = (navigator.language || "")
 						.split("-")[0]
 						.toLowerCase();
+
 					lang =
 						supportedLangs.indexOf(browserLang) !== -1
 							? browserLang
 							: "es";
 				}
+
 				document.documentElement.lang = lang;
 				localStorage.setItem("lang", lang);
 			})();
 		</script>
 	</head>
+
 	<body>
 		<slot />
 	</body>
