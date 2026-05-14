@@ -1,6 +1,6 @@
 export const profile: ProfileData = {
     fullName: "Camila Moldes Ángel",
-    shortName: "Camila Moldes",
+    shortName: "Camila Moldes Ángel",
     tagline: {
         es: "Doctoranda en Educación e Investigadora Educativa",
         en: "PhD Candidate in Education & Educational Researcher",
