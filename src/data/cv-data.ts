@@ -9,14 +9,14 @@ export const profile: ProfileData = {
         es: "Valencia, España",
         en: "Valencia, Spain",
     },
-    photo: "/src/assets/photo.webp",
+    photo: "/photo.webp",
     links: [
         {
             label: "Email",
-            url: "mailto:camilamoldes@gmail.com",
+            url: "https://mail.google.com/mail/?view=cm&fs=1&to=camilamoldes@gmail.com",
             icon: "email",
-        },
-    ],
+        }
+    ]
 };
 
 // ── About Me ─────────────────────────
