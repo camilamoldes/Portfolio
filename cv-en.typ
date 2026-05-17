@@ -1,5 +1,5 @@
 
-#set document(title: "Javier Fernández Bellot - CV", author: "Javier Fernández Bellot")
+#set document(title: "Camila Moldes Ángel xuxu - CV", author: "Camila Moldes Ángel xuxu")
 #set page(
   paper: "a4",
   margin: (x: 2cm, y: 2cm),
@@ -41,14 +41,12 @@
   columns: (1fr, auto, auto),
   gutter: 12pt,
   align(left)[
-    #text(size: 26pt, weight: "bold", tracking: 0.5pt, font: "Outfit")[Javier Fernández Bellot] \
+    #text(size: 26pt, weight: "bold", tracking: 0.5pt, font: "Outfit")[Camila Moldes Ángel] \
     #v(3pt)
-    #text(fill: text-muted, size: 11pt)[Valencia, Spain • 25 years old]
+    #text(fill: text-muted, size: 11pt)[Valencia, Spain]
   ],
   align(right + horizon)[
-    #link("https://www.linkedin.com/in/javier-fern%C3%A1ndez-bellot-455269291/")[LinkedIn] \\\ 
-    #link("https://github.com/yaxfer1")[GitHub] \\\ 
-    #link("mailto:javierfernandezbellot@gmail.com")[Email]
+    #link("mailto:camilamoldes@gmail.com")[Email]
   ],
   align(right + horizon)[
     #box(
@@ -67,11 +65,11 @@
 = About Me
 
 #set text(size: 10pt, fill: rgb("#334155"))
-I am a Computer Engineer and Business Administration graduate. I currently work as a full-stack developer in the renewable energy sector, building everything from interfaces on embedded Linux systems to internal web applications from scratch. My dual background gives me a different perspective: I don't just focus on how to build software, but on understanding why it's worth building in the first place.
+PhD candidate in Education with experience in university academic management, educational research, and coordination of training programs. I have participated in educational innovation projects, digital transformation initiatives, and the organization of international conferences, combining research, planning, and educational resource design.
 
 
 #set text(size: 10pt, fill: rgb("#334155"))
-I'm passionate about high-impact projects, space exploration, and automation. I integrate AI daily to work smarter, but I actively study and improve my programming skills, as I don't believe we are anywhere near being replaced by it yet. My goal is to surround myself with brilliant people to solve hard problems, and I am completely open to relocating anywhere in Europe or the US (having already lived in Belgium and Lithuania) to join a project that matters.
+I am especially interested in educational innovation, digital transformation in higher education, and active learning methodologies. I stand out for my critical thinking, organizational skills, and communication and coordination abilities in academic and multidisciplinary environments.
 
 
 = Work Experience
@@ -81,41 +79,17 @@ I'm passionate about high-impact projects, space exploration, and automation. I 
   columns: (1fr, auto),
   [
     
-    == Full-Stack Developer
-    *Zigor* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+    == Academic Coordination Manager
+    *PMM Business School* — #text(fill: text-muted, size: 9pt)[Valencia, España]
   
   ],
   align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[Apr 2025 - Present]
+    #text(fill: text-muted, weight: "bold", size: 9pt)[Jan 2026 - Present]
   ]
 )
 #v(4pt)
 #set text(size: 10pt, fill: rgb("#334155"))
-Software development for the renewable energy sector: HMI interfaces for high-power solar inverters on embedded Linux platforms (SoM), and internal web applications for company process digitalization. I work with Python, Vue, Astro, Flask, SQL, Docker, and industrial protocols (Modbus, CAN, SCADA).
-#list(
-  [Designed and built from scratch an internal web app (Astro + PostgreSQL + Vue) for inventory management and lab scheduling that significantly improved team productivity],
-  [Built REST APIs with Flask and SQLAlchemy under external client requirements with extensive behavior specification lists],
-  [Designed an automated internationalization (i18n) pipeline to manage translations seamlessly],
-  [Managed the full lifecycle: from requirements to deployment with Docker on self-hosted servers and SoMs]
-)
-
-
-
-#grid(
-  columns: (1fr, auto),
-  [
-    
-    == R&D Technical Consultant
-    *Leyton* — #text(fill: text-muted, size: 9pt)[Valencia, España]
-  
-  ],
-  align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[Dec 2024 - Feb 2025]
-  ]
-)
-#v(4pt)
-#set text(size: 10pt, fill: rgb("#334155"))
-Advised companies on obtaining public and private funding for R&D and innovation projects. Wrote complete technical reports for innovation projects across various sectors. I left this role to return to positions more focused on software development and engineering.
+Academic management, student experience, and digitalization in higher education and postgraduate programs. Coordination of academic programs, instructional content design, quality indicator improvement, LMS experience optimization, applied research, and educational support for faculty and students.
 
 
 
@@ -124,17 +98,74 @@ Advised companies on obtaining public and private funding for R&D and innovation
   columns: (1fr, auto),
   [
     
-    == Erasmus Correspondent in Flanders
-    *Erasmus en Flandes* — #text(fill: text-muted, size: 9pt)[Gante, Bélgica]
+    == Educational Training and Innovation Technician
+    *SFPIE - Universitat de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
   
   ],
   align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[Feb 2022 - Jun 2022]
+    #text(fill: text-muted, weight: "bold", size: 9pt)[Jun 2025]
   ]
 )
 #v(4pt)
 #set text(size: 10pt, fill: rgb("#334155"))
-Editor at the 'Erasmus in Flanders' blog, creating content to promote tourism and student life in the Flanders region during my Erasmus stay in Belgium.
+Participated in the management, evaluation, and monitoring of established and emerging educational innovation, lifelong learning, and digital transformation projects at the University of Valencia.
+
+
+
+
+#grid(
+  columns: (1fr, auto),
+  [
+    
+    == Researcher and Chair Coordinator
+    *Cátedra UNESCO / Universitat de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+  
+  ],
+  align(right)[
+    #text(fill: text-muted, weight: "bold", size: 9pt)[Jun 2024 - Present]
+  ]
+)
+#v(4pt)
+#set text(size: 10pt, fill: rgb("#334155"))
+Member of an interdisciplinary team focused on educational research and action. Collaboration in educational and social projects, creation of educational materials and resources, and planning of academic events such as conferences and seminars.
+
+
+
+
+#grid(
+  columns: (1fr, auto),
+  [
+    
+    == Conference and Events Organizer
+    *UNESCO / Universitat de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+  
+  ],
+  align(right)[
+    #text(fill: text-muted, weight: "bold", size: 9pt)[Jan 2024 - Oct 2024]
+  ]
+)
+#v(4pt)
+#set text(size: 10pt, fill: rgb("#334155"))
+Member of the organizing committee of the II International Congress on Global Education in the Mediterranean (CIEGME 2024), responsible for organization, planning, coordination, and communication tasks.
+
+
+
+
+#grid(
+  columns: (1fr, auto),
+  [
+    
+    == Research Collaboration Scholarship Holder
+    *Ministerio de Educación* — #text(fill: text-muted, size: 9pt)[España]
+  
+  ],
+  align(right)[
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2024 - 2025]
+  ]
+)
+#v(4pt)
+#set text(size: 10pt, fill: rgb("#334155"))
+Collaborated in research groups through project development, database analysis and management, and other educational research-related tasks.
 
 
 
@@ -145,31 +176,12 @@ Editor at the 'Erasmus in Flanders' blog, creating content to promote tourism an
   columns: (1fr, auto),
   [
     
-    == Double Bachelor's Degree in Computer Engineering and Business Administration
-    *Universitat Politècnica de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+    == PhD in Education
+    *Universitat de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
   
   ],
   align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2018 - 2024]
-  ]
-)
-#v(4pt)
-#set text(size: 10pt, fill: rgb("#334155"))
-Thesis: Full-stack application (React + Python + SQL) for news generation and editing with GPT, integrating RAG and LangChain agents. Included business plan and technological development.
-
-
-
-
-#grid(
-  columns: (1fr, auto),
-  [
-    
-    == Erasmus — Computer Engineering
-    *Vilniaus Gedimino Technikos Universitetas* — #text(fill: text-muted, size: 9pt)[Vilnius, Lituania]
-  
-  ],
-  align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2021 - 2022]
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2025 - Present]
   ]
 )
 
@@ -181,16 +193,17 @@ Thesis: Full-stack application (React + Python + SQL) for news generation and ed
   columns: (1fr, auto),
   [
     
-    == Erasmus — Business Administration
-    *Universiteit Gent (Ghent University)* — #text(fill: text-muted, size: 9pt)[Gante, Bélgica]
+    == Master's Degree in Policy, Management and Leadership of Educational Organizations
+    *Universitat de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
   
   ],
   align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2022]
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2023 - 2024]
   ]
 )
 
 
+#text(size: 9pt, fill: text-muted)[GPA: 9.53 • Extraordinary Master's Award]
 
 
 
@@ -198,12 +211,30 @@ Thesis: Full-stack application (React + Python + SQL) for news generation and ed
   columns: (1fr, auto),
   [
     
-    == High School Diploma in Science and Economics
-    *Colegio Sagrado Corazón Hermanos Maristas* — #text(fill: text-muted, size: 9pt)[Valencia, España]
+    == Bachelor's Degree in Pedagogy
+    *Universitat de València* — #text(fill: text-muted, size: 9pt)[Valencia, España]
   
   ],
   align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2016 - 2018]
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2020 - 2024]
+  ]
+)
+
+
+#text(size: 9pt, fill: text-muted)[GPA: 9.27 • Extraordinary Degree Award]
+
+
+
+#grid(
+  columns: (1fr, auto),
+  [
+    
+    == Bachelor's Degree in Philosophy
+    *UNED* — #text(fill: text-muted, size: 9pt)[España]
+  
+  ],
+  align(right)[
+    #text(fill: text-muted, weight: "bold", size: 9pt)[2021 - Present]
   ]
 )
 
@@ -212,112 +243,56 @@ Thesis: Full-stack application (React + Python + SQL) for news generation and ed
 
 = Skills
 
-*Languages:* Python • TypeScript / JavaScript • Java • SQL • HTML / CSS
+*Academic Management:* Organización académica • Planificación • Gestión educativa • Atención al alumnado • Coordinación docente
 
 
-*Frontend:* Vue • React • Astro • Tailwind CSS
+*Research:* Investigación educativa • Investigación social • Análisis de datos • SPSS • Excel • Redacción de informes
 
 
-*Backend & Infrastructure:* Flask • REST APIs • PostgreSQL • SQLite • Docker • Linux • Git • CI/CD
+*Educational Innovation:* Metodologías activas • Transformación digital • Diseño de recursos didácticos • Innovación educativa • LMS
 
 
-*Protocols & Embedded:* Modbus • CAN • SCADA • Sistemas embebidos Linux (SoM)
+*Technology Tools:* Microsoft Office • Hubspot • Moodle • Canvas • Google Classroom • Microsoft Teams • Google Workspace • Zoom • Canva • Prezi
 
 
-*AI & Data:* LangChain • RAG • NLP • LLMs / Prompt Engineering
+*AI & Productivity:* ChatGPT • Gemini • Copilot
 
 
-*Soft Skills:* Liderazgo • Autonomía • Resolución de problemas • Comunicación • Trabajo en equipo • Scrum / Agile
-
-
-
-= Personal Projects
-
-
-#grid(
-  columns: (1fr, auto),
-  [
-    
-    == GPT News Editor
-    #text(size: 9pt, fill: text-muted)[React · Python · SQL · LangChain · GPT / OpenAI]
-  
-  ],
-  align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2024]
-  ]
-)
-#v(4pt)
-#set text(size: 10pt, fill: rgb("#334155"))
-Full-stack application built as my Bachelor's Thesis: a GPT-powered news editor with RAG architecture and LangChain agents. Users can generate, edit, and refine articles through a Human-in-the-Loop workflow. My first real end-to-end development experience, far beyond academic exercises.
+*Soft Skills:* Pensamiento crítico • Comunicación • Trabajo colaborativo • Expresión oral • Planificación
 
 
 
-#grid(
-  columns: (1fr, auto),
-  [
-    
-    == Portfolio Web #text(fill: primary)[#link("https://github.com/yaxfer1/portfolio")[↗]]
-    #text(size: 9pt, fill: text-muted)[Astro · TypeScript · Tailwind CSS · Typst]
-  
-  ],
-  align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2026]
-  ]
-)
-#v(4pt)
-#set text(size: 10pt, fill: rgb("#334155"))
-My personal website and live CV, built with Astro with automatic PDF export via Typst. Designed so I can update my CV quickly, with internationalization (ES/EN), dark mode, and a minimalist design that reflects my style.
 
 
+= Achievements & Awards
 
-#grid(
-  columns: (1fr, auto),
-  [
-    
-    == Zigor Internal Tools
-    #text(size: 9pt, fill: text-muted)[Astro · Vue · PostgreSQL · Python · Docker · Modbus]
-  
-  ],
-  align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2025]
-  ]
-)
-#v(4pt)
-#set text(size: 10pt, fill: rgb("#334155"))
-Internal web application I designed and developed on my own initiative to organize lab inventory and team scheduling. I learned Astro and PostgreSQL from scratch, integrated Vue components, user management, Modbus connectivity, and full deployment with Docker on self-hosted servers. It had a real, direct impact on my colleagues' productivity.
+- *Extraordinary Degree Award* — Universitat de València (2024)
+  #text(size: 9pt, fill: text-muted)[Academic recognition for excellence in the Bachelor's Degree in Pedagogy.]
 
 
-= Volunteering & Activities
+- *Extraordinary Master's Award* — Universitat de València (2025)
+  #text(size: 9pt, fill: text-muted)[Academic recognition for excellence in the Master's Degree in Policy, Management and Leadership of Educational Organizations.]
 
 
-#grid(
-  columns: (1fr, auto),
-  [
-    
-    == Youth Leader and Leisure & Recreation Instructor
-    *OJE — Organización Juvenil Española* — #text(fill: text-muted, size: 9pt)[Valencia, España]
-  
-  ],
-  align(right)[
-    #text(fill: text-muted, weight: "bold", size: 9pt)[2018 - Present]
-  ]
-)
-#v(4pt)
-#set text(size: 10pt, fill: rgb("#334155"))
-Organized and supervised educational and recreational activities for young people: summer camps, outdoor sports (rappelling, hiking), group projects, and workshops. I've guided participants in developing teamwork, leadership, and problem-solving skills while ensuring a safe and engaging environment.
+= Publications
 
+- *Service Learning at University: Expanding Students' Capacities for Human Development* — Tirant lo Blanch Editorial (Oct 2025)
+  #text(size: 9pt, fill: text-muted)[Book chapter in 'Pedagogical Horizons for Equality and Social Justice'.]
+
+
+- *Learning to Learn Competence at University: Application and Evaluation of a Classroom Training Program* — Revista Española de Orientación y Psicopedagogía (REOP) (Apr 2026)
 
 
 
 = Knowledge & Interests
 #set text(size: 10pt)
-Artificial Intelligence & LLMs • Space Exploration • Process Automation • Renewable Energy • Full-Stack Development • Entrepreneurship & Startups • Fitness & Health • Leisure & Recreation Instructor License • Driver's License (B)
+Educational Innovation • Digital Transformation • Educational Research • Active Learning Methodologies • Higher Education
 
 = Languages
 #grid(
   columns: (1fr, 1fr, 1fr),
   [ *Spanish*: Native ],
-  [ *English*: C1 — Advanced _(C1)_ ],
-  [ *Valencian / Catalan*: Native ]
+  [ *Valencian*: C1 — Full Professional Proficiency _(C1)_ ],
+  [ *English*: B2 — Professional Working Proficiency _(B2)_ ]
 )
 
