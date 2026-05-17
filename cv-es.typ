@@ -1,5 +1,5 @@
 
-#set document(title: "Camila Moldes Ángel xuxu - CV", author: "Camila Moldes Ángel xuxu")
+#set document(title: "Camila Moldes Ángel - CV", author: "Camila Moldes Ángel")
 #set page(
   paper: "a4",
   margin: (x: 2cm, y: 2cm),
