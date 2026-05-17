@@ -13,7 +13,7 @@ export const profile: ProfileData = {
     links: [
         {
             label: "Email",
-            url: "camilamoldes@gmail.com",
+            url: "mailto:camilamoldes@gmail.com?subject=Contacto%20desde%20la%20web",
             icon: "email",
         }
     ]
