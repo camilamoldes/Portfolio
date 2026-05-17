@@ -46,7 +46,7 @@
     #text(fill: text-muted, size: 11pt)[Valencia, España]
   ],
   align(right + horizon)[
-    #link("camilamoldes@gmail.com")[Email]
+    #link("mailto:camilamoldes@gmail.com?subject=Contacto%20desde%20la%20web")[Email]
   ],
   align(right + horizon)[
     #box(
