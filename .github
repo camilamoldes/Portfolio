@@ -1,0 +1,42 @@
+name: Generate CV PDFs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/data/cv-data.ts'
+      - 'scripts/generate-pdf.ts'
+      - 'src/assets/photo.webp'
+      - 'src/assets/fonts/**'
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v3
+        
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate PDFs
+        run: npm run pdf
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update generated CV PDFs"
+          file_pattern: "public/*.pdf *.typ"
