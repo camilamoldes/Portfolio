@@ -13,7 +13,7 @@ export const profile: ProfileData = {
     links: [
         {
             label: "Email",
-            url: "https://mail.google.com/mail/?view=cm&fs=1&to=camilamoldes@gmail.com",
+            url: "camilamoldes@gmail.com",
             icon: "email",
         }
     ]
