@@ -1,6 +1,6 @@
 # 📄 Portfolio Personal y Generador de PDFs
 
-Este proyecto surge de la pereza que da mantener un currículum en dos idiomas (inglés y español) luchando con plantillas estáticas donde cualquier pequeño cambio de línea o de sección descuadra toda la estructura.
+Este proyecto surge de la pereza que da mantener un currículum en dos idiomas (inglés y español) luchando con plantillas estáticas donde cualquier pequeño cambio de línea o de sección descuadra toda la estructura. xuxu
 
 Por ello he creado esta web. Sirve simultáneamente como un **portfolio web interactivo** y como **generador de PDFs** limpios y bien estructurados.
 
